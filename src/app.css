@@ -35,3 +35,9 @@ h6,
 p {
     font-family: 'SpaceGrotesk';
 }
+
+body {
+    font-family: 'SpaceGrotesk';
+    background: rgb(255, 228, 191);
+    background: linear-gradient(260deg, rgba(255, 228, 191, 1) 0%, rgba(255, 194, 199, 1) 100%);
+}
