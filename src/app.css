@@ -38,6 +38,14 @@ p {
 
 body {
     font-family: 'SpaceGrotesk';
-    background: rgb(255, 228, 191);
-    background: linear-gradient(260deg, rgba(255, 228, 191, 1) 0%, rgba(255, 194, 199, 1) 100%);
+    background: #003973;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        90deg,
+        rgba(0, 57, 115, 0.2) 0%,
+        rgba(229, 229, 190, 0.2) 100%
+    );
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(90deg, rgba(0, 57, 115, 0.2) 0%, rgba(229, 229, 190, 0.2) 100%);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
