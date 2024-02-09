@@ -47,5 +47,6 @@ body {
     );
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(90deg, rgba(0, 57, 115, 0.2) 0%, rgba(229, 229, 190, 0.2) 100%);
+
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
