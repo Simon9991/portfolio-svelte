@@ -30,14 +30,24 @@
     src: url(/fonts/SpaceGrotesk-Bold.ttf) format('truetype');
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+h1 {
+    @apply text-3xl;
+}
+
+h2 {
+    @apply text-2xl;
+}
+
+h3 {
+    @apply text-xl;
+}
+
+h4 {
+    @apply text-lg;
+}
+
 p {
-    font-family: 'SpaceGrotesk';
+    @apply text-base;
 }
 
 body {
@@ -56,4 +66,14 @@ body {
     /* background: linear-gradient(90deg, rgba(0, 57, 115, 0.2) 0%, rgba(229, 229, 190, 0.2) 100%); */
     /**/
     /* /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.top-nav {
+    @apply sticky top-0 z-20;
+    @apply min-w-full min-h-20;
+    @apply dark:bg-slate-900 bg-red-100;
+    @apply dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800;
+    @apply flex flex-row items-center;
+    @apply px-8 py-2;
+    @apply gap-x-2;
 }
