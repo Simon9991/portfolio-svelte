@@ -55,7 +55,6 @@ body {
     /* TODO: change background style */
     @apply dark:bg-slate-800 bg-white;
     @apply text-neutral-700 dark:text-neutral-200;
-
     @apply dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800 dark:to-30%;
 
     /* background: #003973; */
