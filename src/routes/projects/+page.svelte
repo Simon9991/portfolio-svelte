@@ -1,4 +1,6 @@
 <script lang="ts">
+    // TODO: Import type Project
+
     // ! Important: 50 to 75 letters is recommended for description
     // Approximate card width: 600px max
     const projects = [
