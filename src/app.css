@@ -31,23 +31,28 @@
 }
 
 h1 {
-    @apply text-3xl;
+    @apply text-3xl tracking-tighter;
 }
 
 h2 {
-    @apply text-2xl;
+    @apply text-2xl leading-[1.8rem];
 }
 
 h3 {
-    @apply text-xl;
+    @apply text-xl leading-[1.5rem];
 }
 
 h4 {
-    @apply text-lg;
+    @apply text-lg leading-[1.35rem];
 }
 
 p {
-    @apply text-base;
+    @apply text-base leading-[1.3rem];
+}
+
+h2,
+h3 {
+    @apply tracking-tight;
 }
 
 body {
@@ -56,6 +61,10 @@ body {
     @apply dark:bg-slate-800 bg-white;
     @apply text-neutral-700 dark:text-neutral-200;
     @apply dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800 dark:to-30%;
+
+    background-image: url(/img/bg-moon-hd.jpg);
+    background-size: cover;
+    background-position: 50% 20%;
 
     /* background: #003973; */
     /* fallback for old browsers */
@@ -88,9 +97,9 @@ body {
 
 .card-hover {
     @apply flex flex-col gap-y-2;
-    @apply bg-neutral-100 dark:bg-slate-700 bg-opacity-85;
-    @apply min-w-0 max-w-full min-h-fit max-h-full w-fit;
-    @apply px-4 py-2;
+    @apply bg-neutral-100 dark:bg-slate-700 bg-opacity-40 dark:bg-opacity-50 backdrop-blur-md;
+    @apply min-w-0 max-w-full min-h-fit max-h-full;
+    @apply px-6 py-4;
     @apply rounded-xl;
     @apply hover:brightness-110;
     @apply transition-all;

@@ -3,15 +3,17 @@
 </script>
 
 <div class="top-nav mb-4">
-    <img src="/img/my_profile_pic.jpg" alt="Simon profile" />
+    <a href="/">
+        <img src="/img/my_profile_pic.jpg" alt="Simon profile" />
+    </a>
     <div class="ml-auto flex gap-x-4">
-        <a href="/projects">Projects</a>
-        <a href="/contact-me">Contact</a>
-        <a href="/socials">Socials</a>
+        <a class="nav" href="/projects">Projects</a>
+        <a class="nav" href="/contact-me">Contact</a>
+        <a class="nav" href="/socials">Socials</a>
     </div>
 </div>
 
-<div class="w-full max-h-full min-w-full flex flex-col">
+<div class="w-full max-h-full min-w-full">
     <slot />
 </div>
 
@@ -25,7 +27,7 @@
         @apply cursor-pointer;
     }
 
-    a {
+    .nav {
         @apply font-bold text-lg uppercase;
         @apply transition-opacity hover:opacity-75;
     }
