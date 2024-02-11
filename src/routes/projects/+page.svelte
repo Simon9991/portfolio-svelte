@@ -4,20 +4,24 @@
     const projects = [
         {
             id: 1,
-            title: 'Project 1',
-            description: 'Description 1 long long long long long long long'
+            title: 'UNIX shell program',
+            description: 'Recreated the UNIX shell program from scratch, matches every bash options'
         },
-        { id: 2, title: 'Project 2', description: 'Description 2 long long long long' },
+        {
+            id: 2,
+            title: 'Chess game & engine',
+            description: 'A basic chess game with an engine. Written in C++ and SFML'
+        },
         {
             id: 3,
-            title: 'Project 3 which has a longer title than card',
-            description: 'Description 3'
+            title: 'Portfolio website',
+            description:
+                'This is the website you are currently looking at. Written in Svelte and SvelteKit. Rust is used for the Backend'
         },
         {
             id: 4,
-            title: 'Project 4',
-            description:
-                'Description 4 which should be very long and longer than the card width for testing purposes'
+            title: "Medic'Follow",
+            description: 'Medical website which was a three years end of study project.'
         }
     ];
 </script>
