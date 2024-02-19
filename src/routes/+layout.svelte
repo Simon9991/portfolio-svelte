@@ -10,7 +10,7 @@
 
     onMount(() => {
         const updateScroll = () => {
-            scrollY = window.pageYOffset;
+            scrollY = window.scrollY;
         };
 
         window.addEventListener('scroll', updateScroll);
