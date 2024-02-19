@@ -1,6 +1,8 @@
 <script lang="ts">
     // TODO: Import type Project
 
+    import ProjectCard from './ProjectCard.svelte';
+
     // ! Important: 50 to 75 letters is recommended for description
     // Approximate card width: 600px max
     const projects = [
@@ -28,15 +30,21 @@
     ];
 </script>
 
-<div
-    class="p-5 flex flex-col md:grid md: grid-cols-2 gap-4 md:gap-10 md:max-w-[80%] flex-wrap mr-auto ml-auto"
->
+<div class="wrapper">
     {#each projects as project}
-        <a href="/projects/{project.id}">
-            <div class="card-hover w-[600px] h-fit">
-                <h2 class="font-semibold">{project.title}</h2>
-                <p>{project.description}</p>
-            </div>
-        </a>
+        <div class="w-full h-full flex items-center justify-center">
+            <ProjectCard
+                label={project.title}
+                description={project.description}
+                project_id={project.id}
+            />
+        </div>
     {/each}
 </div>
+
+<style lang="postcss">
+    .wrapper {
+        @apply p-5 ml-auto mr-auto gap-10 max-w-[80%];
+        @apply flex flex-col flex-wrap;
+    }
+</style>
