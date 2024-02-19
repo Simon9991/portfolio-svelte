@@ -2,6 +2,14 @@
     import { onMount } from 'svelte';
     import '../app.css';
 
+    // Nav elements
+    const navElements = [
+        { name: 'Experience', href: '/experience' },
+        { name: 'Projects', href: '/projects' },
+        { name: 'Contact', href: '/contact-me' },
+        { name: 'Socials', href: '/socials' }
+    ];
+
     // Reactive variable for tracking the scroll position
     let scrollY = 0;
 
@@ -48,9 +56,9 @@
         <img src="/img/my_profile_pic.jpg" alt="Simon profile" />
     </a>
     <div class="ml-auto flex gap-x-4">
-        <a class="nav" href="/projects">Projects</a>
-        <a class="nav" href="/contact-me">Contact</a>
-        <a class="nav" href="/socials">Socials</a>
+        {#each navElements as navElement}
+            <a class="nav" href={navElement.href}>{navElement.name}</a>
+        {/each}
     </div>
 </div>
 
