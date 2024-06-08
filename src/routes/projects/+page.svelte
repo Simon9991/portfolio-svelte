@@ -9,7 +9,8 @@
         {
             id: 1,
             title: 'UNIX shell program',
-            description: 'Recreated the UNIX shell program from scratch, matches every bash options'
+            description:
+                'Recreated the UNIX shell program in C, from scratch, matches every bash options'
         },
         {
             id: 2,
