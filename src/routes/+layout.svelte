@@ -2,6 +2,8 @@
     import { onMount } from 'svelte';
     import '../app.css';
 
+    const { children } = $props();
+
     // Nav elements
     const navElements = [
         { name: 'Experience', href: '/experience' },
@@ -11,7 +13,7 @@
     ];
 
     // Reactive variable for tracking the scroll position
-    let scrollY = 0;
+    let scrollY = $state(0);
 
     let bodyElement: HTMLElement | null = null;
     let navElement: HTMLElement | null = null;
@@ -40,15 +42,15 @@
     });
 
     // Calculating the background position
-    $: backgroundPositionY = scrollY * 0.5;
+    let backgroundPositionY = $derived(scrollY * 0.5);
 
-    $: {
+    $effect(() => {
         if (bodyElement && navElement) {
             bodyElement.style.backgroundPositionY = `${backgroundPositionY}px`;
             // moves the nav element at the opposite of the background
             // navElement.style.top = `-${scrollY / 1.5}px`;
         }
-    }
+    });
 </script>
 
 <div id="nav" class="top-nav h-24 mb-4 bg-slate-800 bg-opacity-0 backdrop-blur-md">
@@ -63,7 +65,7 @@
 </div>
 
 <div class="w-full max-h-full min-w-full">
-    <slot />
+    {@render children()}
 </div>
 
 <style lang="postcss">
