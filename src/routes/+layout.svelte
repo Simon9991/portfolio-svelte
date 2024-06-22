@@ -12,8 +12,10 @@
         { name: 'Socials', href: '/socials' }
     ];
 
-    // Reactive variable for tracking the scroll position
+    /** Reactive variable for tracking the scroll position */
     let scrollY = $state(0);
+    /** Calculating the background position */
+    let backgroundPositionY = $derived(scrollY * 0.5);
 
     let bodyElement: HTMLElement | null = null;
     let navElement: HTMLElement | null = null;
@@ -29,7 +31,7 @@
         navElement = document.getElementById('nav');
 
         // TODO: change between light and dark theme
-        const bgImage = `/img/bg-dark-${Math.floor(Math.random() * 5) + 1}.jpg`;
+        const bgImage = `/img/bg-dark-1.jpg`;
 
         if (bodyElement) {
             bodyElement.style.backgroundImage = `url(${bgImage})`;
@@ -41,14 +43,9 @@
         };
     });
 
-    // Calculating the background position
-    let backgroundPositionY = $derived(scrollY * 0.5);
-
     $effect(() => {
         if (bodyElement && navElement) {
             bodyElement.style.backgroundPositionY = `${backgroundPositionY}px`;
-            // moves the nav element at the opposite of the background
-            // navElement.style.top = `-${scrollY / 1.5}px`;
         }
     });
 </script>
