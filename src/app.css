@@ -62,10 +62,6 @@ body {
     @apply dark:bg-slate-800 bg-white;
     @apply text-neutral-700 dark:text-neutral-200;
     @apply dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800 dark:to-30%;
-    @apply dark:bg-opacity-80 bg-opacity-80;
-
-    /* background-image: url(/img/bg-dark-two.jpg); */
-    /* background-size: 115%; */
     background-size: cover;
 }
 
