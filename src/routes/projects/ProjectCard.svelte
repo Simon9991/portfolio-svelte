@@ -2,15 +2,22 @@
     import { onMount } from 'svelte';
     import { Photo } from 'svelte-heros-v2';
 
-    export let label: string;
-    export let description: string; // Can be HTML string
-    export let project_id: number;
+    type ProjectProps = {
+        label: string;
+        description: string; // HTML string
+        projectId: number;
+    };
+    let { label, description, projectId }: ProjectProps = $props();
+    //
+    // export let label: string;
+    // export let description: string; // Can be HTML string
+    // export let project_id: number;
 
     const img_placeholder = 'https://picsum.photos/600/300';
 
     // state
-    let loading = true;
-    let error = false;
+    let loading = $state(true);
+    let error = $state(false);
 
     onMount(() => {
         const img = new Image();
@@ -25,7 +32,7 @@
     });
 </script>
 
-<a href="/projects/{project_id}">
+<a href="/projects/{projectId}">
     <div class="card-hover w-[600px] h-fit max-h-fit flex flex-col gap-4">
         <h2 class="font-semibold">{label}</h2>
         <p>{description}</p>

@@ -30,6 +30,12 @@
     src: url(/fonts/SpaceGrotesk-Bold.ttf) format('truetype');
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* General tags styling */
 h1 {
     @apply text-3xl tracking-tighter;
@@ -59,10 +65,8 @@ h3 {
 body {
     font-family: 'SpaceGrotesk';
     /* TODO: change background style */
-    @apply dark:bg-slate-800 bg-white;
+    @apply dark:bg-slate-900 bg-white;
     @apply text-neutral-700 dark:text-neutral-200;
-    @apply dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800 dark:to-30%;
-    background-size: cover;
 }
 
 kbd {
@@ -72,10 +76,11 @@ kbd {
 /* Custom classes */
 .top-nav {
     @apply sticky top-0 z-20;
-    @apply min-w-full min-h-20;
+    @apply min-w-full min-h-20 max-h-32;
     @apply flex flex-row items-center;
-    @apply px-8 py-2;
+    @apply px-8 py-4;
     @apply gap-x-2;
+    @apply border-b dark:border-slate-700 border-neutral-200;
 }
 
 .card {

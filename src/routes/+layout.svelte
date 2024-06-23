@@ -1,53 +1,14 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
     import '../app.css';
 
     const { children } = $props();
 
     // Nav elements
     const navElements = [
-        { name: 'Experience', href: '/experience' },
+        { name: 'Blog', href: '/blog-post' },
         { name: 'Projects', href: '/projects' },
-        { name: 'Contact', href: '/contact-me' },
         { name: 'Socials', href: '/socials' }
     ];
-
-    /** Reactive variable for tracking the scroll position */
-    let scrollY = $state(0);
-    /** Calculating the background position */
-    let backgroundPositionY = $derived(scrollY * 0.5);
-
-    let bodyElement: HTMLElement | null = null;
-    let navElement: HTMLElement | null = null;
-
-    onMount(() => {
-        const updateScroll = () => {
-            scrollY = window.scrollY;
-        };
-
-        window.addEventListener('scroll', updateScroll);
-
-        bodyElement = document.getElementsByTagName('body')[0];
-        navElement = document.getElementById('nav');
-
-        // TODO: change between light and dark theme
-        const bgImage = `/img/bg-dark-1.jpg`;
-
-        if (bodyElement) {
-            bodyElement.style.backgroundImage = `url(${bgImage})`;
-        }
-
-        // Cleanup the event listener when the component is destroyed
-        return () => {
-            window.removeEventListener('scroll', updateScroll);
-        };
-    });
-
-    $effect(() => {
-        if (bodyElement && navElement) {
-            bodyElement.style.backgroundPositionY = `${backgroundPositionY}px`;
-        }
-    });
 </script>
 
 <div id="nav" class="top-nav h-24 mb-4 bg-slate-800 bg-opacity-0 backdrop-blur-md">
@@ -69,14 +30,22 @@
     img {
         @apply w-20 h-20;
         @apply object-cover;
-        @apply rounded-full;
         @apply dark:grayscale; /* TODO: check if grayscale is needed */
-        @apply hover:grayscale-0 transition-all duration-300 ease-in-out;
+        @apply hover:grayscale-0 transition-all duration-300;
         @apply cursor-pointer;
+        @apply hover:shadow-[rgba(0,0,15,1)_5px_5px_15px_0px];
+        @apply rounded-full;
     }
 
     .nav {
         @apply font-bold text-lg uppercase;
-        @apply transition-opacity hover:opacity-75;
+        @apply transition-all duration-300;
+    }
+
+    .nav:hover {
+        color: #fff;
+        text-shadow:
+            0 0 10px #fff,
+            0 0 20px #fff;
     }
 </style>
