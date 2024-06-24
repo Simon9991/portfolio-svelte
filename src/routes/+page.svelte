@@ -19,8 +19,8 @@
 
         <hr class="h-px mb-8 mt-2 border-0 bg-neutral-200 opacity-65" />
 
-        <div class="p-4 overflow-auto space-y-4">
-            <a href="/" class="inline-flex gap-4 group cursor-pointer">
+        <div class="p-4 overflow-auto flex flex-col gap-4">
+            <a href="/blog/svelte-discovery" class="inline-flex gap-4 group cursor-pointer">
                 <svg
                     viewBox="0 0 98.1 118"
                     xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,9 @@
                 </div>
             </a>
 
-            <a href="/" class="inline-flex gap-4 group cursor-pointer">
+            <hr class="h-px border-0 rounded-md bg-slate-500 my-2" />
+
+            <a href="/blog/rust-and-cpp" class="inline-flex gap-4 group cursor-pointer">
                 <svg
                     viewBox="12.5 15 40 40"
                     xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +75,9 @@
                 </div>
             </a>
 
-            <a href="/" class="inline-flex gap-4 group cursor-pointer">
+            <hr class="h-px border-0 rounded-md bg-slate-500 my-2" />
+
+            <a href="/blog/fedora-for-the-win" class="inline-flex gap-4 group cursor-pointer">
                 <svg
                     viewBox="-10 0 300 300"
                     xmlns="http://www.w3.org/2000/svg"
