@@ -37,7 +37,7 @@
             <ProjectCard
                 label={project.title}
                 description={project.description}
-                project_id={project.id}
+                projectId={project.id}
             />
         </div>
     {/each}

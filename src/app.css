@@ -99,3 +99,12 @@ kbd {
     @apply hover:brightness-110;
     @apply transition-all;
 }
+
+@layer components {
+    .text-white-shadow {
+        color: #fff;
+        text-shadow:
+            0 0 10px #fff,
+            0 0 20px #fff;
+    }
+}
