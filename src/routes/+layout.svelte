@@ -5,7 +5,7 @@
 
     // Nav elements
     const navElements = [
-        { name: 'Blog', href: '/blog-post' },
+        { name: 'Blog', href: '/blog-posts' },
         { name: 'Experience', href: '/my-experience' },
         // { name: 'Projects', href: '/projects' },
         { name: 'Socials', href: '/socials' }

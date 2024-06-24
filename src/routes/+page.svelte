@@ -2,8 +2,7 @@
     import { SVELTE_SVG } from '@/lib/svg';
 </script>
 
-<!-- Scroll testing -->
-<div class="flex flex-col mt-10 gap-y-5 max-w-[850px] w-[850px] mx-auto max-h-full overflow-hidden">
+<div class="flex flex-col mt-8 gap-y-5 max-w-[850px] w-[850px] mx-auto max-h-full overflow-hidden">
     <div class="card-hover self-center max-w-[850px] w-[850px] flex flex-col">
         <h1 class="font-semibold mb-2">Hey, I am Simon Bernabeu!</h1>
         <p>
@@ -20,7 +19,7 @@
         <hr class="h-px mb-8 mt-2 border-0 bg-neutral-200 opacity-65" />
 
         <div class="p-4 overflow-auto flex flex-col gap-4">
-            <a href="/blog/svelte-discovery" class="inline-flex gap-4 group cursor-pointer">
+            <a href="/blog-posts/svelte-discovery" class="inline-flex gap-4 group cursor-pointer">
                 <svg
                     viewBox="0 0 98.1 118"
                     xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +49,7 @@
 
             <hr class="h-px border-0 rounded-md bg-slate-500 my-2" />
 
-            <a href="/blog/rust-and-cpp" class="inline-flex gap-4 group cursor-pointer">
+            <a href="/blog-posts/rust-and-cpp" class="inline-flex gap-4 group cursor-pointer">
                 <svg
                     viewBox="12.5 15 40 40"
                     xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +76,7 @@
 
             <hr class="h-px border-0 rounded-md bg-slate-500 my-2" />
 
-            <a href="/blog/fedora-for-the-win" class="inline-flex gap-4 group cursor-pointer">
+            <a href="/blog-posts/fedora-for-the-win" class="inline-flex gap-4 group cursor-pointer">
                 <svg
                     viewBox="-10 0 300 300"
                     xmlns="http://www.w3.org/2000/svg"
