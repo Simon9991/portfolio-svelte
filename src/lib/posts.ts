@@ -43,6 +43,16 @@ export const SVELTE_DISCOVERY_POST: BlogPost = {
                         Naturally, I had no idea what it was and rushed to their website to learn more about it.</p>
                         </div>
                     `
+        },
+        {
+            type: SectionType.Subtitle,
+            htmlText: 'First few days'
+        },
+        {
+            type: SectionType.Body,
+            htmlText: `<div class="flex flex-col gap-4">
+<p>The first thing I did, was to follow the official <kbd>Svlete</kbd> <b>tutorial</b> on their website (link here: <a href="https://learn.svelte.dev/tutorial/welcome-to-svelte">Welcome to Svelte</a>.</p>
+</div>`
         }
     ]
 };

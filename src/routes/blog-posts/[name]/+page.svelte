@@ -19,7 +19,9 @@
 
     {#each post.sections as section}
         {#if section.type === SectionType.Title}
-            <h2 class="my-6 font-bold">{section.htmlText}</h2>
+            <h2 class="my-6 font-bold uppercase">{section.htmlText}</h2>
+        {:else if section.type === SectionType.Subtitle}
+            <h3 class="mt-6 mb-4 font-semibold uppercase">{section.htmlText}</h3>
         {:else if section.type === SectionType.Body}
             {@html section.htmlText}
         {/if}
