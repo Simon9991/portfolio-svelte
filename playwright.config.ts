@@ -4,7 +4,7 @@ const config: PlaywrightTestConfig = {
     webServer: {
         command: 'pnpm build && pnpm preview',
         url: 'http://localhost:5173',
-        port: 4173
+        reuseExistingServer: !process.env.CI
     },
     testDir: 'tests',
     testMatch: /(.+\.)?(test|spec)\.[jt]s/
