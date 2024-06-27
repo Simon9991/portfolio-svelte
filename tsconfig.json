@@ -10,8 +10,7 @@
         "sourceMap": true,
         "strict": true,
         "moduleResolution": "bundler",
-        "preserveSymlinks": true,
-        "types": ["@playwright/test"]
+        "preserveSymlinks": true
     }
     // Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
     //
