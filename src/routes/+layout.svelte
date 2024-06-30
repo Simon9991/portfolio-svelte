@@ -12,19 +12,21 @@
     ];
 </script>
 
-<div id="nav" class="top-nav h-24 mb-4 bg-slate-800 bg-opacity-0 backdrop-blur-md">
-    <a href="/">
-        <img src="/img/my_profile_pic.jpg" alt="Simon profile" />
-    </a>
-    <div class="ml-auto flex gap-x-4">
-        {#each navElements as navElement}
-            <a class="nav" href={navElement.href}>{navElement.name}</a>
-        {/each}
+<div class="max-h-screen overflow-hidden h-screen w-full min-w-full">
+    <div id="nav" class="top-nav h-24 mb-4 bg-slate-800 bg-opacity-0 backdrop-blur-md">
+        <a href="/">
+            <img src="/img/my_profile_pic.jpg" alt="Simon profile" />
+        </a>
+        <div class="ml-auto flex gap-x-4">
+            {#each navElements as navElement}
+                <a class="nav" href={navElement.href}>{navElement.name}</a>
+            {/each}
+        </div>
     </div>
-</div>
 
-<div class="w-full max-h-full min-w-full">
-    {@render children()}
+    <div class="w-full max-h-full h-full min-w-full overflow-auto">
+        {@render children()}
+    </div>
 </div>
 
 <style lang="postcss">
