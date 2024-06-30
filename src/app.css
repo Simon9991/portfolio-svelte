@@ -112,3 +112,13 @@ kbd {
             0 0 20px #fff;
     }
 }
+
+button.signin,
+a.signin {
+    @apply px-4 py-2 rounded-lg bg-purple-700 hover:brightness-110 transition-all;
+}
+
+button.signout,
+a.signout {
+    @apply px-4 py-2 rounded-lg bg-yellow-600 hover:brightness-110 transition-all;
+}

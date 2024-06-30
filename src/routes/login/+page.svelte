@@ -15,19 +15,9 @@
     {#if $user}
         <h1>Signed in</h1>
         <p>You are currently signed in as <b>{$user.displayName}</b></p>
-        <button
-            class="px-4 py-2 rounded-lg bg-yellow-600 hover:brightness-110 transition-all"
-            onclick={() => signOut(auth)}
-        >
-            Sign out
-        </button>
+        <button class="signout" onclick={() => signOut(auth)}> Sign out </button>
     {:else}
         <h1 class="uppercase">Login</h1>
-        <button
-            class="px-4 py-2 rounded-lg bg-purple-700 hover:brightness-110 transition-all"
-            onclick={signInWithGoogle}
-        >
-            Sign in with Google
-        </button>
+        <button class="signin" onclick={signInWithGoogle}> Sign in with Google </button>
     {/if}
 </div>
