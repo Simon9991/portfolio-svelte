@@ -82,11 +82,20 @@ type UserData = {
     bio: string;
     photoURL: string;
     links: any[];
+    isAdmin: boolean;
 };
 
 export const userData: Readable<UserData | null> = derived(user, ($user, set) => {
     if ($user) {
-        return docStore<UserData>(`users/${$user.uid}`).subscribe(set);
+        const userDocStore = docStore<UserData>(`users/${$user.uid}`);
+
+        userDocStore.subscribe((data) => {
+            if (data) {
+                set({ ...data, isAdmin: data.isAdmin ?? false });
+            } else {
+                set(null);
+            }
+        });
     } else {
         set(null);
     }
