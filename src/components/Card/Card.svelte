@@ -1,6 +1,5 @@
 <script lang="ts">
-    export let label: string;
-    export let hover = true;
+    let { label, hover = true }: { label: string; hover?: boolean } = $props();
 </script>
 
 <div class="{hover ? 'card-hover' : 'card'} w-[600px] h-fit">
